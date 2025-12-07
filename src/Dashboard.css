@@ -1,0 +1,244 @@
+/* ---------- عام ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ---------- تسجيل الدخول ---------- */
+  .login-container {
+    min-height: 70vh;
+    /* background: linear-gradient(to bottom right, #2563eb, #1e40af); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1rem; */
+    background-color: #E6E6E6;
+   }
+  
+  .login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+    /* max-width: 400px; */
+    /* width: 100%; */
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    /* color: #2563eb; */
+    margin-bottom: 2rem;
+  }
+  
+  .login-inputs input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  
+  .login-inputs input:focus {
+    border-color: #3b82f6;
+  }
+  
+  .login-buttons button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .login-buttons button:first-child {
+    /* background-color: #16a34a; */
+    background-color: #905f00;
+  }
+  
+  .login-buttons button:first-child:hover {
+    background-color: #15803d;
+  }
+  
+  .login-buttons button:last-child {
+    /* background-color: #2563eb; */
+    background-color: #905f00;
+  }
+  
+  .login-buttons button:last-child:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* ---------- لوحة التحكم ---------- */
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  .sidebar {
+    width: 250px;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .user-sidebar {
+    background-color: #065f46;
+  }
+  
+  .admin-sidebar {
+    background-color: #1e3a8a;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .nav-buttons button {
+    /* width: 100%; */
+    text-align: right;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .nav-buttons button.active-tab {
+    background-color: rgba(255,255,255,0.2);
+  }
+  
+  .nav-buttons button:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  .logout-button {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #dc2626;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #b91c1c;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .tab-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  .chart-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .table th {
+    background-color: #065f46;
+    color: white;
+    padding: 0.5rem;
+    text-align: right;
+  }
+  
+  .table td {
+    padding: 0.5rem;
+    border-top: 1px solid #d1d5db;
+  }
+  
+  .consumption {
+    font-weight: bold;
+    color: #16a34a;
+  }
+  
+  .form-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-card label {
+    font-weight: bold;
+  }
+  
+  .form-card input,
+  .form-card textarea {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    outline: none;
+  }
+  
+  .form-card textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .action-btn {
+    background-color: #16a34a;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+  
+  .action-btn:hover {
+    background-color: #15803d;
+  }
+  

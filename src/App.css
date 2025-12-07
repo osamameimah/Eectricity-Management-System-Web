@@ -287,69 +287,115 @@ body {
   width: 80px;
   height: 80px;
   /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-  background-color: #EDB136;
+  /* background-color: #EDB136; */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
   font-size: 2rem;
+  background-color: #905F00;
 }
 
 /* Services Section */
+ /* Section Container */
 .services {
-  padding: 5rem 2rem;
-  background: white;
+  padding: 6rem 2rem;
+  /* background: linear-gradient(180deg, #fff8e1 0%, #fff3cd 100%); */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.services-container {
+.container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.service-card {
-  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
-  padding: 2rem;
-  border-radius: 15px;
   text-align: center;
-  transition: all 0.3s;
-  cursor: pointer;
-  background: linear-gradient(59deg, #F5F7CB -109%, #BACB4D 100%);
-  /* background: linear-gradient(29deg, #f5f7fa 0%, #bacb15 100%); */
 }
 
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
-
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.service-card h3 {
-  /* color: #1e3c72; */
+.title {
+  font-size: 2.8rem;
+  color: #905F00;
   margin-bottom: 0.5rem;
 }
 
-.service-card p {
-  color: #666;
-  font-size: 0.9rem;
+.subtitle {
+  font-size: 1.2rem;
+  color: #6b4a00;
+  margin-bottom: 4rem;
+}
+
+/* Cards Grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Individual Card */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Circle */
+.icon {
+  font-size: 3.5rem;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #EDB105;
+  color: #fff;
+  transition: transform 0.4s, background 0.4s;
+}
+
+.card:hover .icon {
+  transform: rotate(20deg) scale(1.2);
+  background: #905F00;
+}
+
+/* Card Title */
+.card h3 {
+  font-size: 1.5rem;
+  color: #905F00;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.card:hover h3 {
+  color: #EDB105;
+}
+
+/* Card Description */
+.card p {
+  font-size: 1rem;
+  color: #6b4a00;
+  line-height: 1.6;
+  transition: color 0.3s;
+}
+
+.card:hover p {
+  color: #333;
 }
 
 /* Payment Methods */
 .payment {
   padding: 5rem 2rem;
   background: #f8f9fa;
-  background-color: #c4b043;
+  background-color: #E6E6E6;
 }
 
 .payment-container {
@@ -396,13 +442,13 @@ body {
   margin-bottom: 1rem;
   border-radius: 10px;
   overflow: hidden;
-}
+ }
 
 .faq-question {
   padding: 1.5rem;
   cursor: pointer;
   font-weight: 600;
-  color: #1e3c72;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -443,6 +489,8 @@ background-color: #f8f9fa;
   text-align: center;
   /* color: #1e3c72; */
   margin-bottom: 2rem;
+  color: #905F00;
+  font-weight: bold;
 }
 
 .form-group {
@@ -660,4 +708,172 @@ body {
 
 .report-form button:hover {
   background: #353550;
+}
+
+/* 
+
+*/
+ 
+/* P
+rivacy Policy Footer */
+
+
+.privacy-container {
+  direction: rtl;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #fdf9f3;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.privacy-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.privacy-header h1 {
+  color: #905f00;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-header p {
+  color: #6e4e00;
+  font-size: 1.1rem;
+}
+
+.privacy-content h2 {
+  color: #905f00;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-content p,
+.privacy-content li {
+  color: #333;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.privacy-content ul {
+  margin-right: 20px;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: #fff;
+  border-right: 5px solid #905f00;
+  border-radius: 8px;
+}
+
+/* import "./TermsOfUse.css"; */
+
+.terms-container {
+  direction: rtl;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #fdf9f3;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.terms-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.terms-header h1 {
+  color: #905f00;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.terms-header p {
+  color: #6e4e00;
+  font-size: 1.1rem;
+}
+
+.terms-content h2 {
+  color: #905f00;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.terms-content p,
+.terms-content li {
+  color: #333;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.terms-content ul {
+  margin-right: 20px;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: #fff;
+  border-right: 5px solid #905f00;
+  border-radius: 8px;
+}
+
+/* import "./RefundPolicy.css"; */
+
+.refund-container {
+  direction: rtl;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #fdf9f3;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.refund-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.refund-header h1 {
+  color: #905f00;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.refund-header p {
+  color: #6e4e00;
+  font-size: 1.1rem;
+}
+
+.refund-content h2 {
+  color: #905f00;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.refund-content p,
+.refund-content li {
+  color: #333;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.refund-content ul {
+  margin-right: 20px;
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: #fff;
+  border-right: 5px solid #905f00;
+  border-radius: 8px;
 }
