@@ -53,7 +53,7 @@
   
    .card p {
     font-size: 1rem;
-    color: #6b4a00;
+    color: #666;
     line-height: 1.6;
     transition: color 0.3s;
   }
@@ -64,8 +64,7 @@
 
   .services {
     padding: 6rem 2rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
+   }
   
   .container {
     max-width: 1200px;
@@ -74,14 +73,18 @@
   }
   
   .title {
-    font-size: 2.8rem;
-    color: #905f00;
+    font-size: 2.5rem;
+    color: #333333;
     margin-bottom: 0.5rem;
   }
   
   .subtitle {
     font-size: 1.2rem;
-    color: #6b4a00;
+    color: #666;
     margin-bottom: 4rem;
+  }
+
+  .description{
+    color: #FFF;
   }
   

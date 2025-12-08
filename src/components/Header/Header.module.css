@@ -72,6 +72,8 @@
 .btnPrimary {
   background: #ffd700;
   color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .btnPrimary:hover {
@@ -84,6 +86,9 @@
   background: white;
   color: black;
   border: 2px solid white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+
 }
 
 .btnSecondary:hover {

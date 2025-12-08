@@ -1,10 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../pages/Dashboard/Dashnoard";
- import TermsOfUse from "../pages/footerPages/TermsOfUse";
-import ReturnPolicy from "../pages/footerPages/ReturnPolicy";
-import PrivacyPolicyFooter from "../pages/footerPages/PrivacyPolicyFooter";
+ import PrivacyPolicy from "../pages/footerPages/PrivacyPolicy/PrivacyPolicy";
 import Home from "../pages/Home/Home";
-
+import ReturnPolicy from "../pages/footerPages/ReturnPolicy/ReturnPolicy";
+import TermsOfUse from "../pages/footerPages/TermsOfUse/TermsOfUse";
 
 const AppRoutes = () => {
   return (
@@ -13,7 +12,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Dashboard />} />
         {/* <Route path="/newSubsucriber" element={<NewRegister />} /> */}
-           <Route path="/PrivacyPolicyFooter" element={<PrivacyPolicyFooter />} />
+           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/TermsOfUse" element={<TermsOfUse />} />
         <Route path="/ReturnPolicy" element={<ReturnPolicy />} />
       </Routes>

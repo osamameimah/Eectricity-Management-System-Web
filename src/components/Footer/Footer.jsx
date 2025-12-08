@@ -10,7 +10,7 @@ const Footer = () => {
             <h3>معلومات قانونية</h3>
             <ul>
               <li>
-                <Link to="/PrivacyPolicyFooter">سياسة الخصوصية</Link>
+                <Link to="/PrivacyPolicy">سياسة الخصوصية</Link>
               </li>
               <li>
                 <Link to="/TermsOfUse">شروط الاستخدام</Link>
