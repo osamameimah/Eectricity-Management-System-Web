@@ -1,47 +1,0 @@
-const Services = () => {
-  const services = [
-    {
-      icon: "📊",
-      title: "إدارة القراءات",
-      description: "متابعة القراءة الشهرية بدقة ووضوح تام",
-    },
-    {
-      icon: "💳",
-      title: "الفواتير الذكية",
-      description: "حساب تلقائي للاستهلاك وسعر الكيلو",
-    },
-    {
-      icon: "💰",
-      title: "المحفظة الإلكترونية",
-      description: "متابعة المدفوعات والمبالغ المتبقية",
-    },
-    {
-      icon: "🔧",
-      title: "إبلاغ عن عطل",
-      description: "إرسال البلاغات ومتابعتها مع فريق الصيانة",
-    },
-  ];
-
-  return (
-    <section className="services" id="services">
-      <div className="container">
-        <h2 className="title">خدماتنا</h2>
-        <p className="subtitle">
-          نوفر لك كل ما تحتاجه لإدارة اشتراكك بسهولة
-        </p>
-
-        <div className="cards">
-          {services.map((service, index) => (
-            <div className="card" key={index}>
-              <div className="icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Services;

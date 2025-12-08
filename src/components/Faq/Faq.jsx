@@ -1,3 +1,5 @@
+
+import styles from "./Faq.module.css";
 import { useState } from "react";
 
 const Faq = () => {
@@ -33,15 +35,15 @@ const Faq = () => {
   ];
 
   return (
-    <section className="faq">
-      <div className="faq-container">
-        <h2 className="section-title" style={{ textAlign: "center" }}>
+    <section className={styles.faq}>
+      <div className={styles.faqContainer}>
+        <h2 className={styles.sectionTitle} style={{ textAlign: "center" }}>
           الأسئلة الشائعة
         </h2>
         {faqs.map((item, index) => (
-          <div key={index} className="faq-item">
+          <div key={index} className={styles.faqItem}>
             <div
-              className="faq-question"
+              className={styles.faqQuestion}
               onClick={() => toggleFaq(index)}
               style={{ cursor: "pointer" }}
             >
@@ -50,7 +52,7 @@ const Faq = () => {
             </div>
 
             {openIndex === index && (
-              <div className="faq-answer">{item.answer}</div>
+              <div className={styles.faqAnswer}>{item.answer}</div>
             )}
           </div>
         ))}

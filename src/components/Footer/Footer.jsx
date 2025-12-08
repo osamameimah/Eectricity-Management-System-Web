@@ -1,11 +1,12 @@
+import styles from"./Footer.module.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-section">
+      <footer className={styles.footer}>
+        <div className={styles.footerContainer}>
+          <div className={styles.footerSection}>
             <h3>معلومات قانونية</h3>
             <ul>
               <li>
@@ -19,7 +20,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="footer-section">
+          <div className={styles.footerSection}>
             <h3>تواصل معنا</h3>
             <ul>
               <li>📞 +970-59-xxx-xxxx</li>
@@ -28,7 +29,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="footer-bottom">
+        <div className={styles.footerBottom}>
           <p>&copy; 2025 شركة الكهرباء. جميع الحقوق محفوظة.</p>
         </div>
       </footer>

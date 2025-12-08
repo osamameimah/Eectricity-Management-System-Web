@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import NewRegister from "../pages/NewRegister";
-import Home from "../components/Home";
 import Dashboard from "../pages/Dashboard/Dashnoard";
  import TermsOfUse from "../pages/footerPages/TermsOfUse";
 import ReturnPolicy from "../pages/footerPages/ReturnPolicy";
 import PrivacyPolicyFooter from "../pages/footerPages/PrivacyPolicyFooter";
+import Home from "../pages/Home/Home";
+
 
 const AppRoutes = () => {
   return (
@@ -12,7 +12,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Dashboard />} />
-        <Route path="/newSubsucriber" element={<NewRegister />} />
+        {/* <Route path="/newSubsucriber" element={<NewRegister />} /> */}
            <Route path="/PrivacyPolicyFooter" element={<PrivacyPolicyFooter />} />
         <Route path="/TermsOfUse" element={<TermsOfUse />} />
         <Route path="/ReturnPolicy" element={<ReturnPolicy />} />

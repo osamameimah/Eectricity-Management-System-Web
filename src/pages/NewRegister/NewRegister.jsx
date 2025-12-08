@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { User, MapPin, Phone, CheckCircle, AlertCircle } from 'lucide-react';
-// import './NewSubscriberForm.css';
-// import "../../../src/Dashboard.css";
-import "../../src/NewSubscriberForm.css";
+import styles from "./NewRegister.module.css";
 
 // NewSubscriber
 export default function NewRegister() {
@@ -52,15 +50,15 @@ export default function NewRegister() {
   };
 
   return (
-    <div className="form-page" dir="rtl">
-      <div className="form-container">
-        <div className="form-header">
+    <div className={styles.formPage} dir="rtl">
+      <div className={styles.formContainer}>
+        <div className={styles.formHeader}>
           <h1>تسجيل مشترك جديد</h1>
           {/* <p>أدخل بيانات المشترك الجديد في النموذج أدناه</p> */}
         </div>
 
         {submitted && (
-          <div className="success-message">
+          <div className={styles.successMessage}>
             <CheckCircle size={24} />
             <div>
               <p>تم التسجيل بنجاح! ✓</p>
@@ -69,8 +67,8 @@ export default function NewRegister() {
           </div>
         )}
 
-        <div className="form-box">
-          <div className="form-group">
+        <div className={styles.formBox}>
+          <div className={styles.formGroup}>
             <label>
               <User size={20} /> اسم المشترك
             </label>
@@ -83,13 +81,13 @@ export default function NewRegister() {
               className={errors.name ? 'input-error' : ''}
             />
             {errors.name && (
-              <p className="error-text">
+              <p className={styles.errorText}>
                 <AlertCircle size={16} /> {errors.name}
               </p>
             )}
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label>
               🆔 رقم الهوية
             </label>
@@ -102,13 +100,13 @@ export default function NewRegister() {
               className={errors.id ? 'input-error' : ''}
             />
             {errors.id && (
-              <p className="error-text">
+              <p className={styles.errorText}>
                 <AlertCircle size={16} /> {errors.id}
               </p>
             )}
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label>
               <MapPin size={20} /> العنوان
             </label>
@@ -121,13 +119,13 @@ export default function NewRegister() {
               className={errors.address ? 'input-error' : ''}
             />
             {errors.address && (
-              <p className="error-text">
+              <p className={styles.errorText}>
                 <AlertCircle size={16} /> {errors.address}
               </p>
             )}
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label>
               <Phone size={20} /> رقم الجوال
             </label>
@@ -140,14 +138,14 @@ export default function NewRegister() {
               className={errors.phone ? 'input-error' : ''}
             />
             {errors.phone && (
-              <p className="error-text">
+              <p className={styles.styles.errorText}>
                 <AlertCircle size={16} /> {errors.phone}
               </p>
             )}
           </div>
 
           {formData.name || formData.address || formData.id || formData.phone ? (
-            <div className="summary-box">
+            <div className={styles.summaryBox}>
               <p>ملخص البيانات:</p>
               {formData.name && <p>👤 الاسم: {formData.name}</p>}
               {formData.id && <p>🆔 الهوية: {formData.id}</p>}
@@ -156,7 +154,7 @@ export default function NewRegister() {
             </div>
           ) : null}
 
-          <div className="form-buttons">
+          <div className={styles.formButtons}>
             <button onClick={handleSubmit}>✓ تسجيل المشترك</button>
             {/* <button onClick={handleReset}>✕ إعادة تعيين</button> */}
           </div>
