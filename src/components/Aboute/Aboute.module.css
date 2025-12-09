@@ -1,52 +1,87 @@
-/* About Section */
+ /* About Section */
 .about {
-    padding: 1rem 2rem;
-    background: #f8f9fa;
-  }
-  
-  .aboutContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .sectionTitle {
-    font-size: 2.5rem;
-    /* color: #1e3c72; */
-    color: #333333;
-    margin-bottom: 1rem;
-  }
-  
-  .sectionSubtitle {
-    font-size: 1.2rem;
+  padding: 3rem 2rem;
+  background-color: #E6E6E6;
+ }
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  color: #333333; /* ذهبي غامق */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #ffd700; /* لمسة ذهبية لخط تحت العنوان */
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.sectionSubtitle {
+font-size: 1.2rem;
     color: #666;
-    margin-bottom: 3rem;
-  }
-  
-  .aboutContent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  
-  .aboutCard {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .aboutIcon {
-    width: 80px;
-    height: 80px;
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-    /* background-color: #EDB136; */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-    font-size: 2rem;
-    background-color: #905f00;
-  }
+    margin-bottom: 4rem;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.aboutCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.aboutCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.aboutIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #ffd700, #f7e7ce); /* ذهبي متدرج */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.aboutCard:hover .aboutIcon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.aboutCard h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.aboutCard p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}

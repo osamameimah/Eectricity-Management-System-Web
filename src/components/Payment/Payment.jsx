@@ -1,31 +1,30 @@
-import styles from "./Payment.module.css";
-const Payment = ()=>{
-    return(
-        <>
-        
-        <section className={styles.payment} id="payment">
-            <div className={styles.paymentContainer}>
-              <h2 className={styles.sectionTitle}>طرق الدفع المتاحة</h2>
-              <p className={styles.sectionSubtitle}>ادفع بالطريقة التي تناسبك</p>
-              <div className={styles.paymentGrid}>
-                <div className={styles.paymentCard}>
-                  <span>💳 Jawwal Pay</span>
-                </div>
-                <div className={styles.paymentCard}>
-                  <span>💵 PalPay</span>
-                </div>
-                <div className={styles.paymentCard}>
-                  <span>💰 نقداً</span>
-                </div>
-                <div className={styles.paymentCard}>
-                  <span>🏦 بنك فلسطين</span>
-                </div>
-              </div>
+ import styles from "./Payment.module.css";
+
+const Payment = () => {
+  const paymentMethods = [
+    { icon: "💳", name: "Jawwal Pay" },
+    { icon: "💵", name: "PalPay" },
+    { icon: "💰", name: "نقداً" },
+    { icon: "🏦", name: "بنك فلسطين" },
+  ];
+
+  return (
+    <section className={styles.payment} id="payment">
+      <div className={styles.paymentContainer}>
+        <h2 className={styles.sectionTitle}>طرق الدفع المتاحة</h2>
+        <p className={styles.sectionSubtitle}>ادفع بالطريقة التي تناسبك بسهولة وأمان</p>
+
+        <div className={styles.paymentGrid}>
+          {paymentMethods.map((method, index) => (
+            <div key={index} className={styles.paymentCard}>
+              <div className={styles.paymentIcon}>{method.icon}</div>
+              <span className={styles.paymentName}>{method.name}</span>
             </div>
-          </section>
-        </>
-    )
-    
-    }
-    
-    export default Payment;
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Payment;

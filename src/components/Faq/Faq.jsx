@@ -1,5 +1,4 @@
-
-import styles from "./Faq.module.css";
+ import styles from "./Faq.module.css";
 import { useState } from "react";
 
 const Faq = () => {
@@ -23,37 +22,43 @@ const Faq = () => {
     {
       question: "كيف أبلغ عن عطل؟",
       answer:
-        'من لوحة التحكم الخاصة بك، اذهب إلى "الإبلاغ عن عطل" واملأ التفاصيل المطلوبة. أو بالنزول للاسفل وتعيئة الفورم سيتم إرسال فريق الصيانة في أقرب وقت ممكن.',
+        'من لوحة التحكم الخاصة بك، اذهب إلى "الإبلاغ عن عطل" واملأ التفاصيل المطلوبة. سيتم إرسال فريق الصيانة في أقرب وقت ممكن.',
     },
     {
       question: "كيفية ترشيد استهلاك الكهرباء",
       answer:
-        'من خلال اطفاء كافة الاجهزة الغير مستعملة , واستخذام مصابيح ال led ',
+        'من خلال إطفاء كافة الأجهزة الغير مستخدمة، واستخدام مصابيح LED لتوفير الطاقة.',
     },
-
-    
   ];
 
   return (
     <section className={styles.faq}>
       <div className={styles.faqContainer}>
-        <h2 className={styles.sectionTitle} style={{ textAlign: "center" }}>
-          الأسئلة الشائعة
-        </h2>
+        <h2 className={styles.sectionTitle}>الأسئلة الشائعة</h2>
+
         {faqs.map((item, index) => (
-          <div key={index} className={styles.faqItem}>
+          <div
+            key={index}
+            className={`${styles.faqItem} ${openIndex === index ? styles.active : ""}`}
+          >
             <div
               className={styles.faqQuestion}
               onClick={() => toggleFaq(index)}
-              style={{ cursor: "pointer" }}
             >
               <span>{item.question}</span>
-              <span>{openIndex === index ? "-" : "+"}</span>
+              <span className={styles.faqIcon}>
+                {openIndex === index ? "−" : "+"}
+              </span>
             </div>
 
-            {openIndex === index && (
-              <div className={styles.faqAnswer}>{item.answer}</div>
-            )}
+            <div
+              className={styles.faqAnswer}
+              style={{
+                maxHeight: openIndex === index ? "500px" : "0px",
+              }}
+            >
+              <p>{item.answer}</p>
+            </div>
           </div>
         ))}
       </div>
