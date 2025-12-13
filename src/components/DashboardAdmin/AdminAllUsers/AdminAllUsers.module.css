@@ -1,0 +1,295 @@
+ /* AdminAllUsers.module.css */
+
+/* ---------- عام ---------- */
+.mainContent {
+  /* padding: 2rem; */
+  direction: rtl;
+  font-family: "Tajawal", system-ui, sans-serif;
+  background: transparent;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #905f00;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* ===== بطاقات info ===== */
+.homeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.infoCard {
+  background: linear-gradient(135deg, #ffffff, #fbfbfb);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  min-height: 64px;
+}
+
+.infoCard span { font-size: 13px; color: #6b7280; }
+.infoCard strong { font-size: 1.1rem; color: #111; }
+
+/* highlight */
+.consumption { color: #905f00; font-weight: bold; }
+
+/* ===== جدول ===== */
+.issueWrapper {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead tr th {
+  background-color: #905f00;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.table tbody td {
+  padding: 10px;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* زر تفاصيل / إضافة قراءة */
+.detailsBtn {
+  background-color: #905f00;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.detailsBtn:hover { opacity: 0.92; }
+
+/* ====== Pagination ====== */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.pagingInfo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #444;
+  font-size: 14px;
+}
+
+.pagingControls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pageBtn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+.pageBtn:hover { background: #f5f5f5; }
+.pageBtn[disabled] { opacity: 0.5; cursor: default; }
+.pageActive {
+  background: #905f00;
+  color: white;
+  border-color: #905f00;
+}
+
+/* dots */
+.pageDots { padding: 6px 8px; color: #777; }
+
+/* ===== Modal ===== */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+}
+
+.modalBox {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+  width: 100%;
+  max-width: 900px;
+  padding: 18px;
+}
+
+.modalTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.modalTable th {
+  background: #905f00;
+  color: #fff;
+  padding: 8px;
+  font-size: 13px;
+}
+.modalTable td {
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Modal smaller (used for add reading) */
+.modalBoxSmall {
+  max-width: 520px;
+}
+
+/* modal actions buttons (reuse) */
+.modalActions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.modalConfirm {
+  background: #0a7f3f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.modalCancel {
+  background: #c53030;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* close btn */
+.closeBtn {
+  margin-top: 10px;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== Inputs within modal ===== */
+.modalBox input[type="number"],
+.modalBox input[type="date"],
+.modalBox input[type="text"],
+.modalBox select,
+.modalBox textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* ===== Toast ===== */
+.toast {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 15000;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+.toastSuccess { background: #0a7f3f; }
+.toastError { background: #c53030; }
+
+/* ===== responsive tweaks ===== */
+@media (max-width: 880px) {
+  .table thead { display: none; }
+  .table tbody td { display: block; text-align: right; padding-left: 50%; position: relative; }
+  .table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    width: calc(50% - 24px);
+    font-weight: 600;
+    text-align: left;
+  }
+  .homeGrid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+}
+
+/* small helpers */
+.hidden { display: none; }
+
+
+/* زر الذفع */
+/* زر الدفع */
+.payBtn {
+  background: #0a7f3f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.payBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* زر الدفع */
+.payBtn {
+  background: #0a7f3f;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.payBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}

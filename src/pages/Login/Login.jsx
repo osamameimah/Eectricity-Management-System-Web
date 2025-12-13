@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import { LogOut, Home, BarChart3, Wallet, AlertCircle, Users, Settings, FileText, Wrench } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
-// import './Dashboard.css';
-// import "../../../src/Dashboard.css";
-import styles from "./Dashboard.module.css";
+import styles from "./Login.module.css";
 import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -32,7 +28,7 @@ export default function Dashboard() {
             />
           </div>
           <div className={styles.loginButtons}>
-            <button onClick={() => navigate("/user")}>تسجيل الدخول </button>
+            <button onClick={() => navigate("/dashboard")}>تسجيل الدخول </button>
             {/* <button onClick={() => handleLogin('admin')}>دخول كمدير</button> */}
                         {/* <button onClick={() => navigate("/admin")}>دخول كمدير</button> */}
 

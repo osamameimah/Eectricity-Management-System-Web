@@ -1,15 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  /* color: #333; */
-  overflow-x: hidden;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -36,133 +25,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-/* ///////////// */
-
-/* Reset بسيط */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Arial", sans-serif;
-}
-
-body {
-  background: #f4f4f9;
-  color: #333;
-} */
-
-/* .dashboard {
-  display: flex;
-  min-height: 100vh;
-} */
-
-/* Sidebar */
-/* .sidebar {
-  width: 220px;
-  color: #fff;
-  padding: 20px;
-}
-
-.sidebar h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.sidebar ul li:hover,
-.sidebar ul li.active {
-  background: #353550;
-} */
-
-/* Content */
-/* .content {
-  flex: 1;
-  padding: 30px;
-} */
-
-/* .page {
-  display: none;
-}
-
-.page.active {
-  display: block;
-} */
-
-/* Report Form */
-/* .report-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-}
-
-.report-form input,
-.report-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.report-form button {
-  padding: 12px;
-  background: #1e1e2f;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.report-form button:hover {
-  background: #353550;
-} */
-
-/* 
-
-*/
-
-/* P
-rivacy Policy Footer */
-
-/* section {
-  margin-bottom: 2rem;
-  padding: 1.2rem;
-  background: #fff;
-  border-right: 5px solid #905f00;
-  border-radius: 8px;
-} */
-
-/* import "./TermsOfUse.css"; */
  
-/* section {
-  margin-bottom: 2rem;
-  padding: 1.2rem;
-  background: #fff;
-  border-right: 5px solid #905f00;
-  border-radius: 8px;
-} */
-
-/* import "./RefundPolicy.css"; */
-
-
-
-/*Dashboard */
-
- body {
-  font-family: "Tajawal", sans-serif;
-  /* background: linear-gradient(135deg, #905f00, #edb105); */
-}
 
 .login-container {
   width: 100%;
@@ -245,11 +108,7 @@ rivacy Policy Footer */
   opacity: 0.9;
 }
 
-.dashboard {
-  display: flex;
-  min-height: 100vh;
-  background: #f5f5f5;
-}
+ 
 
 /* ✅ Sidebar */
 aside {

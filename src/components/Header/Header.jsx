@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
 import NewRegister from "../../pages/NewRegister/NewRegister";
-import Dashboard from "../../pages/Dashboard/Dashboard";
+// import Dashboard from "../../pages/Dashboard/Dashboard";
+import Dashboard from "../../pages/Login/Login";
+ 
 Modal.setAppElement("#root");
 
 const Header = () => {

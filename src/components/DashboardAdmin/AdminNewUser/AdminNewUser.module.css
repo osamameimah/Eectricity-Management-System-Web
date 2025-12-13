@@ -1,0 +1,246 @@
+ /* =======================================================
+   البBreadcrumb
+======================================================= */
+.breadcrumb {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #905f00;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* =======================================================
+   إضافة مشترك
+======================================================= */
+.addUserBtn {
+  background: #905f00;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.addUserBtn:hover {
+  opacity: 0.85;
+}
+
+/* =======================================================
+   جدول المشتركين
+======================================================= */
+.tableWrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: #905f00;
+  color: white;
+  padding: 10px;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.actionsTd {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.actionBtn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: white;
+  transition: 0.3s;
+}
+
+.acceptBtn { background: #0a7f3f; }
+.rejectBtn { background: #c53030; }
+.editBtn   { background: #905f00; }
+
+/* =======================================================
+   مودال
+ /* =======================================================
+   ⭐ Modal (المودال المحسّن)
+======================================================= */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  animation: fadeIn 0.25s ease-out;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modalBox {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.25);
+  animation: scaleIn 0.25s ease-out;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.modalTitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #905f00;
+  text-align: center;
+}
+
+.noteLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+.noteInput {
+  width: 100%;
+  min-height: 110px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.noteInput:focus {
+  border-color: #905f00;
+  box-shadow: 0 0 4px rgba(144, 95, 0, 0.3);
+  outline: none;
+}
+
+/* Inputs في مودال الإضافة والتعديل */
+.modalBox input,
+.modalBox textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.modalBox input:focus,
+.modalBox textarea:focus {
+  outline: none;
+  border-color: #905f00;
+  box-shadow: 0 0 4px rgba(144, 95, 0, 0.3);
+}
+
+
+/* أزرار المودال */
+.modalActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modalConfirm,
+.modalCancel {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.modalConfirm {
+  background: #0a7f3f;
+  color: white;
+}
+
+.modalCancel {
+  background: #c53030;
+  color: white;
+}
+
+/* Hover */
+.modalConfirm:hover {
+  background: #086c35;
+}
+
+.modalCancel:hover {
+  background: #a32828;
+}
+
+/* للأجهزة الصغيرة */
+@media (max-width: 480px) {
+  .modalBox {
+    padding: 20px;
+  }
+  .modalTitle {
+    font-size: 20px;
+  }
+  .modalActions button {
+    font-size: 14px;
+  }
+}
+
+/* =======================================================
+   Toast
+======================================================= */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  animation: fadeToast 2.5s ease forwards;
+  z-index: 20000;
+}
+
+@keyframes fadeToast {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.toastSuccess { background: #0a7f3f; }
+.toastError   { background: #c53030; }

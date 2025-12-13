@@ -1,21 +1,23 @@
+import { useLocation } from "react-router-dom";
 import "./App.css";
-// import Footer from "./components/Footer";
-// import Header from "./components/Header";
-// import Home from "./components/Home";
-// import Loginmodal from "./loginmodal";
-// import Dashboard from "./pages/Dashboard/Dashnoard";
-// import NewRegister from "./pages/NewRegister";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import AppRoutes from "./routes";
 
 function App() {
+  const location = useLocation();
+
+  // إخفاء الهيدر والفوتر عند الدخول على /user
+  const hideLayout = location.pathname.startsWith("/dashboard");
+
   return (
     <>
+      {!hideLayout && <Header />}
+
       <AppRoutes />
 
-      {/* <Dashboard/> */}
-      {/* <NewRegister/> */}
-  
-     </>
+      {!hideLayout && <Footer />}
+    </>
   );
 }
 

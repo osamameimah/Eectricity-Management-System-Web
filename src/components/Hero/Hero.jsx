@@ -1,8 +1,10 @@
  import React, { useState } from "react";
 import Modal from "react-modal";
-import Dashboard from "../../pages/Dashboard/Dashboard";
+// import Dashboard from "../../pages/Dashboard/Dashboard";
+import Dashboard from "../../pages/Login/Login";
 import NewRegister from "../../pages/NewRegister/NewRegister";
 import styles from "./Hero.module.css";
+
 
 Modal.setAppElement("#root");
 

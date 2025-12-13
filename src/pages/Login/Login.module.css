@@ -1,0 +1,74 @@
+/* ---------- عام ---------- */
+ 
+  
+  /* ---------- تسجيل الدخول ---------- */
+  .loginContainer {
+    min-height: 70vh;
+    /* background: linear-gradient(to bottom right, #2563eb, #1e40af); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1rem; */
+    /* background-color: #E6E6E6; */
+    }
+  
+  .loginBox {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+    /* max-width: 400px; */
+    /* width: 100%; */
+    text-align: center;
+  }
+  
+  .loginTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    /* color: #2563eb; */
+    margin-bottom: 2rem;
+  }
+  
+  .loginInputs input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  
+  .loginInputs input:focus {
+    /* border-color: #3b82f6; */
+  }
+  
+  .loginButtons button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .loginButtons button:first-child {
+    /* background-color: #16a34a; */
+    background-color: #905f00;
+  }
+  
+  .loginButtons button:first-child:hover {
+    /* background-color: #15803d; */
+  }
+  
+  .loginButtons button:last-child {
+    /* background-color: #2563eb; */
+    background-color: #905f00;
+  }
+  
+  .loginButtons button:last-child:hover {
+    /* background-color: #1d4ed8; */
+  }
+   
