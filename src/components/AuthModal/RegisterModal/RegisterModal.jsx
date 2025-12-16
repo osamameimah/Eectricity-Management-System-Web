@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { User, MapPin, Phone, CheckCircle, AlertCircle } from 'lucide-react';
-import styles from "./NewRegister.module.css";
+import styles from "./RegisterModal.module.css";
 
 // NewSubscriber
-export default function NewRegister() {
+export default function RegisterModal() {
   const [formData, setFormData] = useState({
     name: '',
     address: '',

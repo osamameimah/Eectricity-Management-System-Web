@@ -1,0 +1,87 @@
+.page {
+  /* padding: 2rem; */
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #905f00;
+  font-weight: bold;
+}
+
+.card {
+  background: #fff;
+  /* max-width: 600px; */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.formGroup label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #c8962c;
+  box-shadow: 0 0 0 2px rgba(200, 150, 44, 0.2);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #905f00, #c8962c);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+
+.breadcrumb {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #905f00;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}

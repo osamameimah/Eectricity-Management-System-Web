@@ -1,36 +1,38 @@
 import React, { useState } from 'react';
-import styles from "./Login.module.css";
+import styles from "./LoginModal.module.css";
 import { useNavigate } from 'react-router-dom';
 
-export default function Dashboard() {
+export default function LoginModal() {
   const [currentUser, setCurrentUser] = useState(null);
   const [loginData, setLoginData] = useState({ identifier: '', password: '' });
-  const navigate =  useNavigate();
- 
+  const navigate = useNavigate();
+
   // ---------- صفحة تسجيل الدخول ----------
   if (!currentUser) {
     return (
       <div className={styles.loginContainer}>
         <div className={styles.loginBox}>
-          <h1 className={styles.loginTitle}>تسجيل الدخول</h1>  
+          <h1 className={styles.loginTitle}>تسجيل الدخول</h1>
           <div className={styles.loginInputs}>
             <input
               type="text"
               placeholder="رقم الجوال أو الهوية أو رقم الاشتراك"
               value={loginData.identifier}
-              onChange={(e) => setLoginData({...loginData, identifier: e.target.value})}
+              onChange={(e) => setLoginData({ ...loginData, identifier: e.target.value })}
             />
             <input
               type="password"
               placeholder="كلمة المرور"
               value={loginData.password}
-              onChange={(e) => setLoginData({...loginData, password: e.target.value})}
+              onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
             />
           </div>
           <div className={styles.loginButtons}>
-            <button onClick={() => navigate("/dashboard")}>تسجيل الدخول </button>
+            <button onClick={() => navigate("/dashboarduser")}>تسجيل الدخول </button>
+            {/* <button onClick={() => navigate("/admin/dashboard")}>تسجيل كمدير </button> */}
+            
             {/* <button onClick={() => handleLogin('admin')}>دخول كمدير</button> */}
-                        {/* <button onClick={() => navigate("/admin")}>دخول كمدير</button> */}
+            {/* <button onClick={() => navigate("/admin")}>دخول كمدير</button> */}
 
           </div>
         </div>

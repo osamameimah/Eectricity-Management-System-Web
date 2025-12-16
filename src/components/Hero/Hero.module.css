@@ -1,46 +1,60 @@
  .hero {
-  min-height: 100vh;
-  /* background: linear-gradient(135deg, #1a1a1a, #2b1b00); */
-background: linear-gradient(135deg, #2b1b00, #905f00);
-
-  
-
+  min-height:100vh;
+   background: linear-gradient(135deg, #2b1b00, #905f00);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-}
+ }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(144,95,0,0.3), transparent 70%);
+  background: radial-gradient(circle, rgba(144, 95, 0, 0.3), transparent 70%);
   animation: pulse 6s infinite;
 }
 
 @keyframes pulse {
-  0%,100% { opacity: 0.6; }
+  0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
 }
 
+ 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ .fadeItem {
+    opacity: 0;
+     animation: fadeInUp 0.6s ease-out forwards;
+ }
+
+ 
+ 
 .heroContent {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   width: 100%;
   padding: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
 }
 
 .textBox h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #ffd700;
   margin-bottom: 1rem;
-  text-shadow: 0 0 20px rgba(255,215,0,0.5);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
 
 .textBox p {
@@ -56,37 +70,44 @@ background: linear-gradient(135deg, #2b1b00, #905f00);
   gap: 1rem;
 }
 
-.btn {
-  padding: 0.9rem 2.5rem;
-  border-radius: 40px;
+ .btn {
+  padding: 0.6rem 1.8rem;
   border: none;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: 0.4s;
+  font-weight: 600;
+  font-family: "Tajawal", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.primary {
-  background: linear-gradient(135deg, #ffd700, #905f00);
+.btnPrimary {
+  background: linear-gradient(90deg, #ffd700, #ffec4a);
   color: black;
-  box-shadow: 0 0 20px rgba(255,215,0,0.4);
 }
 
-.primary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 40px rgba(255,215,0,0.8);
+.btnPrimary:hover {
+  background: linear-gradient(90deg, #ffed4e, #ffe066);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
 
-.secondary {
+.btnSecondary {
   background: transparent;
-  border: 2px solid #ffd700;
   color: #ffd700;
+  border: 2px solid #ffd700;
 }
 
-.secondary:hover {
+.btnSecondary:hover {
+  color: black; 
   background: #ffd700;
-  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
+
 
 .iconBox {
   width: 220px;
@@ -98,17 +119,104 @@ background: linear-gradient(135deg, #2b1b00, #905f00);
   justify-content: center;
   font-size: 6rem;
   color: white;
-  box-shadow: 0 0 50px rgba(255,215,0,0.7);
+  box-shadow: 0 0 50px rgba(255, 215, 0, 0.7);
   animation: float 4s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 @keyframes float {
-  0%,100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-25px); }
 }
+ 
+@media (max-width: 1024px) {
+  .heroContent {
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .textBox h1 {
+    font-size: 2.8rem;
+  }
+  .textBox p {
+    font-size: 1.1rem;
+  }
+  .iconBox {
+    width: 180px;
+    height: 180px;
+    font-size: 4.5rem;
+  }
+}
+ 
+@media (max-width: 768px) {
+     .hero {
+        min-height: auto; 
+        padding-top: 5rem;
+        padding-bottom: 5rem;  
+    }
 
-/* ================= MODAL ================= */
+    .heroContent {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+    
+    .textBox {
+        order: 2;
+    }
 
+    .textBox h1 {
+        font-size: 2.5rem;
+    }
+
+    .textBox p {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .iconBox {
+        order: 1;
+        width: 150px;
+        height: 150px;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        margin-bottom: 0; 
+    }
+
+    .btn {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0.8rem;
+    }
+}
+ 
+@media (max-width: 500px) {
+    .textBox h1 {
+        font-size: 2rem;
+    }
+
+    .iconBox {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+    }
+    
+    .btn {
+        width: 100%;
+        font-size: 13px;
+        padding: 0.6rem;
+    }
+}
+
+
+ 
 .modalOverlay {
   background-color: rgba(0,0,0,0.8);
   z-index: 999;
@@ -127,6 +235,7 @@ background: linear-gradient(135deg, #2b1b00, #905f00);
   padding: 1rem;
   animation: zoomIn 0.4s forwards;
   z-index: 1000;
+  overflow-y: auto;
 }
 
 @keyframes zoomIn {

@@ -1,0 +1,108 @@
+.page {
+  /* padding: 2rem; */
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #905f00;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.card,
+.tableCard {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.cardTitle {
+  margin-bottom: 1rem;
+  color: #c8962c;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.formGroup input {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #c8962c;
+}
+
+.submitBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #905f00, #c8962c);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.table th {
+  background: #f9f9f9;
+}
+
+.empty {
+  padding: 1rem;
+  color: #999;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.breadcrumb {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #905f00;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}

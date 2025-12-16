@@ -1,8 +1,6 @@
-/* ---------- عام ---------- */
  
-  
-  /* ---------- تسجيل الدخول ---------- */
-  .loginContainer {
+ /* ---------- تسجيل الدخول ---------- */
+   .loginContainer {
     min-height: 70vh;
     /* background: linear-gradient(to bottom right, #2563eb, #1e40af); */
     display: flex;
@@ -72,3 +70,8 @@
     /* background-color: #1d4ed8; */
   }
    
+
+
+
+
+  

@@ -1,18 +1,23 @@
- import React, { useState } from "react";
+ import React, { useState, useEffect } from "react"; // استيراد useEffect
 import Modal from "react-modal";
-// import Dashboard from "../../pages/Dashboard/Dashboard";
-import Dashboard from "../../pages/Login/Login";
-import NewRegister from "../../pages/NewRegister/NewRegister";
-import styles from "./Hero.module.css";
-
+  import styles from "./Hero.module.css";
+import RegisterModal from "../AuthModal/RegisterModal/RegisterModal";
+import LoginModal from "../AuthModal/LoginModal/LoginModal";
+ 
 
 Modal.setAppElement("#root");
 
 const Hero = () => {
   const [modalType, setModalType] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false); // حالة لبدء التحريك
 
   const openModal = (type) => setModalType(type);
   const closeModal = () => setModalType(null);
+
+  // تشغيل التحريك بعد تحميل المكون
+  useEffect(() => {
+    setIsLoaded(true); 
+  }, []);
 
   return (
     <>
@@ -21,22 +26,38 @@ const Hero = () => {
 
         <div className={styles.heroContent}>
           <div className={styles.textBox}>
-            <h1>نظام إدارة المشتركين</h1>
-            <p>
+            
+            {/* العنوان الرئيسي (H1) - تأخير 0.3 ثانية */}
+            <h1 
+              className={`${styles.fadeItem} ${isLoaded ? styles.fadeIn : ''}`} 
+              style={{animationDelay: '0.3s'}}
+            >
+              أهلاً بكم في الموقع الرسمي لشركة كهرباء غزة
+            </h1>
+            
+            {/* الوصف (P) - تأخير 0.6 ثانية */}
+            <p 
+              className={`${styles.fadeItem} ${isLoaded ? styles.fadeIn : ''}`} 
+              style={{animationDelay: '0.6s'}}
+            >
               منصة ذكية لإدارة الاشتراكات، متابعة الاستهلاك، إصدار الفواتير،
               وتقديم البلاغات بسهولة وشفافية كاملة
             </p>
 
-            <div className={styles.buttons}>
+            {/* الأزرار (.buttons) - تأخير 0.9 ثانية */}
+            <div 
+              className={`${styles.buttons} ${styles.fadeItem} ${isLoaded ? styles.fadeIn : ''}`} 
+              style={{animationDelay: '0.9s'}}
+            >
               <button
-                className={`${styles.btn} ${styles.primary}`}
+                className={`${styles.btn} ${styles.btnPrimary}`}
                 onClick={() => openModal("register")}
               >
                 اشترك الآن
               </button>
 
               <button
-                className={`${styles.btn} ${styles.secondary}`}
+                className={`${styles.btn} ${styles.btnSecondary}`}
                 onClick={() => openModal("login")}
               >
                 تسجيل الدخول
@@ -57,8 +78,8 @@ const Hero = () => {
         className={styles.modalContent}
       >
         <button className={styles.closeBtn} onClick={closeModal}>✕</button>
-        {modalType === "register" && <NewRegister />}
-        {modalType === "login" && <Dashboard />}
+        {modalType === "register" && <RegisterModal />}
+        {modalType === "login" && <LoginModal />}
       </Modal>
     </>
   );

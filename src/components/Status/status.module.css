@@ -1,41 +1,95 @@
-.stats {
-    background: white;
-    padding: 4rem 2rem;
-    margin-top: -100px;
-    position: relative;
-    z-index: 2;
-  }
-  
+ .stats {
+  background: white;
+  padding: 4rem 1.5rem;
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+.statsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+ .statCard {
+  background-color: #905f00;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.statNumber {
+  font-size: 2.8rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+ 
+@media (max-width: 1024px) {
   .statsContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .statCard {
-    background-color: #905f00;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .statCard:hover {
-    transform: translateY(-10px);
-  }
-  
+
   .statNumber {
-    font-size: 3rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.5rem;
+    font-size: 2.4rem;
   }
-  
+}
+ 
+@media (max-width: 768px) {
+  .stats {
+    padding: 3rem 1rem;
+    margin-top: -60px;
+  }
+
+  .statsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .statCard {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .statNumber {
+    font-size: 2.2rem;
+  }
+
   .statLabel {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1rem;
   }
+}
+ 
+@media (max-width: 480px) {
+  .statsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard {
+    padding: 1.6rem 1rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 0.95rem;
+  }
+}

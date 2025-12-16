@@ -10,7 +10,7 @@
 
 .sectionTitle {
   font-size: 3rem;
-  color: #333333; /* ذهبي غامق */
+  color: #333333;  
   font-weight: 700;
   margin-bottom: 1rem;
   position: relative;
@@ -79,3 +79,11 @@ font-size: 1.2rem;
   font-weight: 600;
   color: #333;
 }
+
+
+ @media (max-width: 760px){
+.sectionTitle{
+    font-size: 2rem;
+ 
+}
+  }
