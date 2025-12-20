@@ -145,8 +145,7 @@
   
   .mainContent {
     flex: 1;
-    /* padding: 2rem; */
-    overflow-y: auto;
+     overflow-y: auto;
   }
   
   .tabContent{
@@ -197,10 +196,10 @@
     border-top: 1px solid #d1d5db;
   }
   
-  .consumption {
+  /* .consumption {
     font-weight: bold;
     color: #905f00;
-  }
+  } */
   
   .formCard {
     background-color: white;
@@ -389,7 +388,7 @@
 }
 /* القراءات */
 
-.detailsBtn {
+/* .detailsBtn {
   background-color: #905f00;
   color: white;
   border: none;
@@ -401,7 +400,7 @@
 
 .detailsBtn:hover {
   opacity: 0.9;
-}
+} */
 
 /* ===== مودال ===== */
 
@@ -449,6 +448,7 @@
   background-color: #905f00;
   color: white;
   padding: 10px;
+  font-size: 13px;
 }
 
 .modalTable td {

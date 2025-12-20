@@ -1,0 +1,59 @@
+ .issueWrapper {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  overflow-x: auto; /* سكرول أفقي عند الحاجة */
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* عرض أدنى للحفاظ على الجدول */
+}
+
+.table thead tr {
+  background: linear-gradient(90deg,#905f00,#c07f00);
+}
+
+.table thead th {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.table tbody td {
+  padding: 10px;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.detailsBtn {
+  background-color: #905f00;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.detailsBtn:hover { opacity: 0.92; }
+
+/* Responsive */
+@media (max-width: 880px) {
+  .table thead th, .table tbody td {
+    font-size: 12px; /* تصغير النص */
+    padding: 6px;
+  }
+  .table {
+    min-width: 100%; /* عرض كامل الشاشة مع السكرول الأفقي */
+  }
+}

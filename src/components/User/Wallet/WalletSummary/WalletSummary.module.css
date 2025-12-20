@@ -1,0 +1,24 @@
+.walletSummary {
+  background: linear-gradient(135deg, #905f00, #c8962c);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.walletSummary h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .walletSummary {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

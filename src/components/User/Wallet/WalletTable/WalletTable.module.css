@@ -1,0 +1,34 @@
+ .walletTable {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.walletTable h3 {
+  margin-bottom: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+.table th {
+  background-color: #905f00;
+  color: white;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.table td {
+  padding: 0.5rem;
+  border-top: 1px solid #d1d5db;
+}
+
+.unpaid {
+  color: red;
+  font-weight: bold;
+}

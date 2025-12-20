@@ -1,0 +1,112 @@
+ .dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(135deg, #905f00, #c8962c);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+}
+
+.sidebarTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.navButtons {
+  flex: 1;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 6px;
+  transition: background 0.3s;
+}
+
+.navBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.activeTab {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== Main ===== */
+.mainContent {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* ===== Menu Button ===== */
+.menuBtn {
+  display: none;
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 100;
+  background: #905f00;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .menuBtn {
+    display: block;
+  }
+    .navButtons {
+    margin-top: 60px; /* يبعد الأيقونات عن زر ☰ */
+  }
+
+  .sidebar {
+    width: 60px; /* أيقونات فقط */
+    padding: 0.5rem;
+  }
+
+  .sidebarTitle {
+    display: none;
+  }
+
+  .navBtn span,
+  .logoutButton span {
+    display: none;
+  }
+
+  .sidebar.collapsed {
+    width: 220px; /* عند الفتح */
+  }
+
+  .sidebar.collapsed .navBtn span,
+  .sidebar.collapsed .logoutButton span {
+    display: inline;
+  }
+}

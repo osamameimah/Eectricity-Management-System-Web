@@ -1,0 +1,95 @@
+ .modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.modalBox {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+  width: 100%;
+  max-width: 900px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh; /* ارتفاع المودال */
+  overflow-y: auto; /* سكرول داخلي */
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.modalTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.modalTable th {
+  background: #905f00;
+  color: #fff;
+  padding: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.modalTable td {
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+/* Close button */
+.closeBtn {
+  margin-top: 10px;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Pay button */
+.payBtn {
+  background: #0a7f3f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.payBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .modalBox {
+    max-width: 100%;
+    padding: 12px;
+  }
+  .modalTable th, .modalTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

@@ -50,6 +50,7 @@
     color: white;
     cursor: pointer;
     transition: background 0.3s;
+    background-color: red;
   }
   
   .loginButtons button:first-child {

@@ -1,0 +1,56 @@
+ .tableWrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table { width: 100%; border-collapse: collapse; }
+
+.table th { color: white; padding: 10px; }
+.table thead tr { background: linear-gradient(90deg, var(--primary), var(--primary-2)); }
+.table td { padding: 5px; border-bottom: 1px solid #ddd; }
+
+.actionsTd { display: flex; gap: 6px; justify-content: center; }
+
+.actionBtn { border: none; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; color: white; transition: 0.3s; }
+.acceptBtn { background: #0a7f3f; }
+.rejectBtn { background: #c53030; }
+.editBtn { background: #905f00; }
+.actionBtn:disabled { background: #9ca3af; cursor: not-allowed; opacity: 0.7; }
+
+/* .tableWrapper {
+  overflow-x: auto;
+} */
+
+
+/* تمرير أفقي للجدول على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .tableWrapper {
+    overflow-x: auto; /* يسمح بالتمرير الأفقي */
+  }
+
+  /* تصغير حجم الخط في رؤوس الأعمدة */
+  .table th {
+    font-size: 12px; /* حجم أصغر للشاشات الصغيرة */
+    padding: 6px;
+  }
+
+  /* تصغير حجم الخط في خلايا الجدول */
+  .table td {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  /* إخفاء بعض الأعمدة غير الأساسية على الموبايل */
+  .table th:nth-child(3), /* العنوان */
+  .table th:nth-child(4), /* رقم الجوال */
+  .table th:nth-child(5)  /* التاريخ */ {
+    display: none;
+  }
+  .table td:nth-child(3),
+  .table td:nth-child(4),
+  .table td:nth-child(5) {
+    display: none;
+  }
+}

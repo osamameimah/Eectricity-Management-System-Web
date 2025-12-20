@@ -1,0 +1,14 @@
+ 
+ .detailsBtn {
+  background-color: #905f00;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.detailsBtn:hover {
+  opacity: 0.9;
+}

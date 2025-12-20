@@ -1,0 +1,41 @@
+.walletCard {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.walletCard:hover {
+  transform: translateY(-5px);
+}
+
+.walletCard span {
+  font-size: 2rem;
+}
+
+.walletCard h4 {
+  margin: 0;
+  color: #905f00;
+}
+
+.walletCard p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+@media (max-width: 600px) {
+  .walletCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

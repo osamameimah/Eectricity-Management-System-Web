@@ -1,0 +1,45 @@
+.historyCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.historyHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.historyTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historyTable th {
+  background: #905f00;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.historyTable td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .historyTable th,
+  .historyTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .historyHeader h3 {
+    font-size: 14px;
+  }
+}

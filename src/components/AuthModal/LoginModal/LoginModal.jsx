@@ -28,11 +28,9 @@ export default function LoginModal() {
             />
           </div>
           <div className={styles.loginButtons}>
-            <button onClick={() => navigate("/dashboarduser")}>تسجيل الدخول </button>
-            {/* <button onClick={() => navigate("/admin/dashboard")}>تسجيل كمدير </button> */}
-            
-            {/* <button onClick={() => handleLogin('admin')}>دخول كمدير</button> */}
-            {/* <button onClick={() => navigate("/admin")}>دخول كمدير</button> */}
+            <button onClick={() => navigate("/dashboard/user")}>تسجيل كيوزر </button>
+            <button onClick={() => navigate("/dashboard/admin")}>تسجيل كمدير </button>
+            <button onClick={() => navigate("/dashboard/superadmin")}>تسجيل ك سوبر أدمن </button>
 
           </div>
         </div>

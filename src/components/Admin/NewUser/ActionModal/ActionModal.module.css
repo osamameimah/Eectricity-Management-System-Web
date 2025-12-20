@@ -1,0 +1,18 @@
+ .modalOverlay { position: fixed; inset:0; background: rgba(0,0,0,0.55); display:flex; align-items:center; justify-content:center; z-index:99999; animation:fadeIn 0.25s ease-out; padding:20px; }
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+.modalBox { background:#fff; width:100%; max-width:520px; padding:28px; border-radius:14px; box-shadow:0 8px 35px rgba(0,0,0,0.25); animation:scaleIn 0.25s ease-out; }
+@keyframes scaleIn { from{transform:scale(0.85);opacity:0;} to{transform:scale(1);opacity:1;} }
+
+.modalTitle { font-size:22px; font-weight:bold; margin-bottom:18px; color:#905f00; text-align:center; }
+.modalBox input, .modalBox textarea { width:100%; padding:10px 12px; border-radius:8px; border:1px solid #bbb; margin-bottom:10px; font-size:14px; transition:0.2s; }
+.modalBox input:focus, .modalBox textarea:focus { outline:none; border-color:#905f00; box-shadow:0 0 4px rgba(144,95,0,0.3); }
+
+.modalActions { margin-top:20px; display:flex; justify-content:space-between; gap:10px; }
+.modalConfirm, .modalCancel { flex:1; padding:10px 0; font-size:15px; font-weight:bold; border-radius:10px; border:none; cursor:pointer; transition:0.25s; }
+.modalConfirm { background:#0a7f3f; color:white; }
+.modalCancel { background:#c53030; color:white; }
+.modalConfirm:hover { background:#086c35; }
+.modalCancel:hover { background:#a32828; }
+
+@media(max-width:480px){ .modalBox{padding:20px;} .modalTitle{font-size:20px;} .modalActions button{font-size:14px;} }

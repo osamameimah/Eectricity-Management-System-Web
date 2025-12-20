@@ -1,0 +1,115 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,11,12,0.5);
+  z-index: 999;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalBox {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(16,24,40,0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modalTitle {
+  margin: 0 0 16px 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.salaryList {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.salaryList li {
+  padding: 12px;
+  margin-bottom: 8px;
+  background: #f9fafb;
+  border-left: 4px solid #905f00;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #1f2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.salaryAmount {
+  font-weight: 700;
+  color: #905f00;
+  font-size: 1.05rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.closeBtn {
+  background: #905f00;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.closeBtn:hover {
+  background: #7a4c00;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(144,95,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .modalBox {
+    padding: 16px;
+  }
+
+  .modalTitle {
+    font-size: 1rem;
+  }
+
+  .salaryList li {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .closeBtn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

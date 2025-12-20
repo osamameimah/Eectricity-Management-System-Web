@@ -1,0 +1,16 @@
+ .addUserBtn {
+  background: #905f00;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.addUserBtn:hover {
+  opacity: 0.85;
+}

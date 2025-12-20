@@ -1,0 +1,82 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.modalBox {
+  background: white;
+  padding: 2rem;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  animation: scaleIn 0.3s ease;
+}
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #905f00;
+}
+
+.modalText {
+  margin: 1rem 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.modalConfirm {
+  background: #905f00;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.modalCancel {
+  background: #ddd;
+  color: #111;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .modalBox {
+    padding: 1.5rem;
+  }
+
+  .modalText {
+    font-size: 14px;
+  }
+
+  .modalConfirm,
+  .modalCancel {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+

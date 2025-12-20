@@ -1,7 +1,8 @@
- import styles from "./AdminHome.module.css";
-import React from "react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
+ import React from "react";
+   import styles from "./AdminHome.module.css";
 import { Users, Wallet, AlertTriangle, FileWarning, UserPlus, Zap } from "lucide-react";
+import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb";
+import StatsCard from "../../../components/Admin/Home/StatsCard/StatsCard";
 
 const AdminHome = () => {
   const pageTitles = { home: "الرئيسية" };
@@ -13,7 +14,7 @@ const AdminHome = () => {
     { title: "عدد الأعطال المفتوحة", value: "12", icon: <AlertTriangle size={24} /> },
     { title: "الفواتير غير المدفوعة", value: "47", icon: <FileWarning size={24} /> },
     { title: "الفواتير المدفوعة", value: "5", icon: <FileWarning size={24} /> },
-       { title: "المشتركين الجدد بانتظار الموافقة", value: "18", icon: <UserPlus size={24} /> },
+    { title: "المشتركين الجدد بانتظار الموافقة", value: "18", icon: <UserPlus size={24} /> },
   ];
 
   const monthlyData = [
@@ -25,31 +26,16 @@ const AdminHome = () => {
 
   return (
     <div className={styles.mainContent}>
-      <div className={styles.breadcrumb}>لوحة التحكم / {pageTitles.home}</div>
+      <Breadcrumb page={pageTitles.home} />
 
-      {/* بطاقات الإحصائيات */}
       <div className={styles.homeGrid}>
         {stats.map((item, index) => (
-          <div key={index} className={styles.infoCard}>
-            <span>{item.title}</span>
-            <strong>{item.value}</strong>
-          </div>
+          <StatsCard  key={index} title={item.title} value={item.value} icon={item.icon} />
         ))}
       </div>
 
-      {/* مخطط الفواتير */}
-      <div className={styles.chartCard}>
-        <h3>إحصائية الفواتير للأشهر الأخيرة</h3>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={monthlyData}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
-            <YAxis />
-            <Tooltip />
-            <Bar dataKey="bills" fill="#905f00" />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
+      {/* Uncomment if you want to show chart */}
+      {/* <ChartCard title="إحصائية الفواتير للأشهر الأخيرة" data={monthlyData} dataKey="bills" /> */}
     </div>
   );
 };

@@ -1,0 +1,98 @@
+.kiloCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.kiloCard h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #905f00;
+  font-weight: bold;
+}
+
+.kiloValue {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 10px 0 20px;
+  color: #1f2937;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.inputRow label {
+  font-weight: bold;
+  color: #333;
+}
+
+.inputRow input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.updateBtn {
+  background: #905f00;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.updateBtn:hover {
+  transform: scale(1.03);
+}
+
+.note {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.errorMsg {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+
+@media (max-width: 768px) {
+  .kiloCard h2 {
+    font-size: 1.3rem;
+  }
+
+  .kiloValue {
+    font-size: 1.8rem;
+  }
+
+  .inputRow input {
+    font-size: 14px;
+  }
+
+  .updateBtn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .note {
+    font-size: 12px;
+  }
+}

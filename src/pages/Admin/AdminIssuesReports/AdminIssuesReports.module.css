@@ -1,16 +1,15 @@
  /* =======================================================
-   البBreadcrumb
+   Breadcrumb
 ======================================================= */
 .breadcrumb {
   background: white;
   padding: 12px 20px;
-   margin-bottom: 20px;
+  margin-bottom: 20px;
   font-size: 15px;
   font-weight: bold;
   color: #905f00;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-radius: 12px;
-
+  border-radius: 12px;
 }
 
 /* =======================================================
@@ -27,19 +26,20 @@
 .table {
   width: 100%;
   border-collapse: collapse;
- }
+}
 
 .table th {
-  /* background-color: #905f00; */
   color: white;
   padding: 10px;
-  }
+  background: linear-gradient(90deg, #905f00, #c07f00);
+  font-weight: bold;
+}
 
- 
 .table td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   text-align: center;
+  font-size: 14px;
 }
 
 .detailsBtn {
@@ -159,21 +159,62 @@
   background: #a32828;
 }
 
-/* للأجهزة الصغيرة */
-@media (max-width: 480px) {
+/* ================== ريسبونسيف ================== */
+@media (max-width: 1024px) {
+  .table th, .table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .detailsBtn {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .detailsBtn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
   .modalBox {
     padding: 20px;
   }
+
   .modalTitle {
     font-size: 18px;
   }
+
   .modalActions button {
     font-size: 14px;
   }
 }
 
+@media (max-width: 480px) {
+  .table th, .table td {
+    font-size: 11px;
+    padding: 4px;
+  }
 
-.table thead tr{
-      background: linear-gradient(90deg,var(--primary),var(--primary-2));
-      
+  .detailsBtn {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  .modalBox {
+    padding: 15px;
+  }
+
+  .modalTitle {
+    font-size: 16px;
+  }
+
+  .modalActions button {
+    font-size: 12px;
+  }
 }
